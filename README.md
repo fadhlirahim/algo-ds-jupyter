@@ -2,18 +2,21 @@
 
 My notes following [The Last Algorithms Course You Need](https://frontendmasters.com/courses/algorithms/)
 
+Deno Installation
+
+[https://docs.deno.com/runtime/manual](https://docs.deno.com/runtime/manual)
+
 Using deno + jupyter notebook
 
 [https://docs.deno.com/runtime/manual/tools/jupyter](https://docs.deno.com/runtime/manual/tools/jupyter)
 
 ```
-pip3 install jupyter
+pip3 install jupyterlab
 ```
 
 ```
-jupyter notebook
+jupyter lab
 ```
-
 
 ## Jupyter Installation
 
