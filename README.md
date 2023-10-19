@@ -1,6 +1,6 @@
 # algo-ds-jupyter
 
-My notes following [The Last Algorithms Course You Need](https://frontendmasters.com/courses/algorithms/)
+My notes following [The Last Algorithms Course You Need](https://frontendmasters.com/courses/algorithms/) by [ThePrimeagen](https://twitter.com/ThePrimeagen)
 
 Deno Installation
 
