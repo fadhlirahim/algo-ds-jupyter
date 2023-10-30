@@ -23,6 +23,7 @@ export default class Stack<T> {
         node.prev = this.head;
         this.head = node;
     }
+
     pop(): T | undefined {
         this.length = Math.max(0, this.length - 1);
         if (!this.head) {

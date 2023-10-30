@@ -24,11 +24,12 @@ export default class Queue<T> {
         this.tail = node;
     }
     deque(): T | undefined {
+        this.length = Math.max(0, this.length - 1);
+
         if (!this.head) {
             return undefined;
         }
         
-        this.length--;
 
         const head = this.head; // save our current pointer to head
         this.head = this.head.next; // set the head to the next node
