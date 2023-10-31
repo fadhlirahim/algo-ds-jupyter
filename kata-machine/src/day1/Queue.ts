@@ -23,23 +23,22 @@ export default class Queue<T> {
         this.tail.next = node;
         this.tail = node;
     }
+
     deque(): T | undefined {
         this.length = Math.max(0, this.length - 1);
 
         if (!this.head) {
             return undefined;
         }
-        
 
-        const head = this.head; // save our current pointer to head
-        this.head = this.head.next; // set the head to the next node
-
-        //free
-        head.next = undefined;
-        
         if (this.length === 0) {
             this.tail = undefined;
         }
+
+        // A -> B
+        const head = this.head;
+        this.head = head.next;
+        head.next = undefined; // unlink the head node 
 
         return head.value;
     }
