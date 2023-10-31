@@ -1,23 +1,22 @@
-class Node<T> {
-    value: T;
-    next: Node<T> | null = null;
-    prev: Node<T> | null = null;
-
-    constructor(value: T) {
-        this.value = value;
-    }
+type Node<T> = {
+    value: T,
+    next?: Node<T>,
+    prev?: Node<T>, 
 }
 
 
 export default class DoublyLinkedList<T> {
-    private head: Node<T> | null = null;
-    private tail: Node<T> | null = null;
-    public length: number = 0;
+    private head?: Node<T>;
+    private tail?: Node<T>
+    public length: number;
 
-    constructor() {}
+    constructor() {
+        this.head = this.tail = undefined;
+        this.length = 0;
+    }
 
     prepend(item: T): void {
-        const newNode = new Node(item);
+        const newNode =  {value: item } as Node<T>;
         if (!this.head) {
             this.head = this.tail = newNode;
         } else {
@@ -33,7 +32,8 @@ export default class DoublyLinkedList<T> {
         if (idx === 0) return this.prepend(item);
         if (idx === this.length) return this.append(item);
 
-        const newNode = new Node(item);
+        const newNode =  {value: item } as Node<T>;
+
         let current = this.head;
         for (let i = 0; i < idx - 1; i++) {
             if (!current) throw new Error("Invalid state");
@@ -48,7 +48,7 @@ export default class DoublyLinkedList<T> {
     }
 
     append(item: T): void {
-        const newNode = new Node(item);
+        const newNode =  {value: item } as Node<T>;
         if (!this.tail) {
             this.head = this.tail = newNode;
         } else {
