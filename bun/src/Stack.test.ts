@@ -1,15 +1,18 @@
-import { describe, it, expect } from 'bun:test';
-import Stack from './stack';
+import { describe, it, expect, beforeEach } from 'bun:test';
+import Stack from './Stack';
 
 describe('Stack', () => {
+  let stack: Stack<number>;
+
+  beforeEach(() => {
+    stack = new Stack<number>();
+  })
 
   it('starts empty', () => {
-    const stack = new Stack<number>();
     expect(stack.length).toBe(0);
   });
 
   it('pushes and pops', () => {
-    const stack = new Stack<number>();
     stack.push(1);
     stack.push(2);
     expect(stack.length).toBe(2);
@@ -22,7 +25,6 @@ describe('Stack', () => {
   });
 
   it('peeks without popping', () => {
-    const stack = new Stack<number>();
     stack.push(1);
     stack.push(2);
 
