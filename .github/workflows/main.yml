@@ -1,0 +1,9 @@
+- name: Setup Bun
+  # You may pin to the exact commit or the version.
+  # uses: oven-sh/setup-bun@a1800f471a0bc25cddac36bb13e6f436ddf341d7
+  uses: oven-sh/setup-bun@v1
+  with:
+    # The version of Bun to install. (e.g. "latest", "canary", "0.5.6", <sha>)
+    bun-version: latest
+  run: bun test
+  
