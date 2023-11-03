@@ -67,8 +67,10 @@ describe('SinglyLinkedList', () => {
     list.append(2);
     list.append(3);
 
+    expect(list.length).toBe(3);
     expect(list.remove(2)).toBe(2);
     expect(list.length).toBe(2);
+
     expect(list.head!.next!.value).toBe(3);
   });
 
@@ -76,9 +78,11 @@ describe('SinglyLinkedList', () => {
     list.append(1);
     list.append(2);
     list.append(3);
-
+    
+    expect(list.length).toBe(3);
     expect(list.removeAt(1)).toBe(2);
     expect(list.length).toBe(2);
+    
     expect(list.head!.next!.value).toBe(3);
   });
 
