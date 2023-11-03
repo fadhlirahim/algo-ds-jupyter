@@ -14,7 +14,9 @@ jobs:
       with:
         bun-version: latest
     - name: Install dependencies
+      uses: ./
       run: bun install
     - name: Run tests
+      uses: ./
       run: bun test
 
