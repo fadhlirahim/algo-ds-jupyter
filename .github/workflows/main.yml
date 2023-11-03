@@ -1,0 +1,23 @@
+name: Bun CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./bun
+    steps:
+    - uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
+    - name: Install dependencies
+      run: bun install
+    - name: Run tests
+      run: bun test
+

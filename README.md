@@ -26,21 +26,21 @@ jupyter lab
 
 # Code Implementation and Test
 
-kata-machine folder is a clone of [https://github.com/ThePrimeagen/kata-machine/tree/master](https://github.com/ThePrimeagen/kata-machine/tree/master). 
-It's a scaffold used as I follow along the video course. 
+First time setup
 
-All source code is at:
-
-`src/day1`
-
-
-running test on LinkedList
-
-`npx jest LinkedList`
+```
+bun install
+```
 
 
+Running test
+
+```
+bun test
+```
 
 
+## Reference
 
-
+The course uses [https://github.com/ThePrimeagen/kata-machine/tree/master](https://github.com/ThePrimeagen/kata-machine/tree/master). 
 
