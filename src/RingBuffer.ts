@@ -35,12 +35,12 @@ export default class RingBuffer<T> {
   dequeue(): T | null {
     if (this.isEmpty()) {
       return null;
-    } else {
-      const item = this.buffer[this.head];
-      this.head = (this.head + 1) % this.capacity;
-      this.size--;
-      return item;
-    }
+    } 
+
+    const item = this.buffer[this.head];
+    this.head = (this.head + 1) % this.capacity;
+    this.size--;
+    return item;
   }
 }
 
