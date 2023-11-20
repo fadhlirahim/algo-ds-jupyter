@@ -1,10 +1,10 @@
-import { expect, describe } from 'bun:test';
+import { expect, describe, it } from 'bun:test';
 import recursion from './Recursion';
 
 describe('recursion', () => {
 
   it('should return 1 when n is 1', () => {
-    expect(recusion(1)).toBe(1); 
+    expect(recursion(1)).toBe(1); 
   });
 
   it('should return the sum from 1 to n', () => {
