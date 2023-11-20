@@ -1,5 +1,5 @@
 export default function foo(n: number): number {
-    // Base case
+    // base case
     if (n === 1) {
         return 1;
     }
