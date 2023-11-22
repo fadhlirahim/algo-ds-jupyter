@@ -1,3 +1,5 @@
+// This array represents 4 possible directions in which one can move in the maze:
+// up, down left, right
 const dir = [
     [-1, 0],
     [1, 0],
@@ -5,6 +7,7 @@ const dir = [
     [0, 1]
 ]
 
+// This is a recursive function that tries to find a path from the current point (curr) to the end point (end) in the maze.
 function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boolean[][], path: Point[]): boolean {
     // 1. Base Case
     //  off the map
