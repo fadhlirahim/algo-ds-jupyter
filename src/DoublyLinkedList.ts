@@ -100,8 +100,18 @@ export default class DoublyLinkedList<T> {
 
         if (current!.next) current!.next.prev = current!.prev;
         else this.tail = current!.prev;
-
+        this.debug();
         this.length--;
         return current!.value;
+    }
+
+    private debug() {
+        let curr = this.head;
+        let out = "";
+        for (let i = 0; curr && i < this.length; ++i) {
+            out += `${i} => ${curr.value}`;
+            curr = curr.next;
+        }
+        console.log(out);
     }
 }
