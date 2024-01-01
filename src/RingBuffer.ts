@@ -42,5 +42,13 @@ export default class RingBuffer<T> {
     this.size--;
     return item;
   }
+
+  peek(): T | null {
+    if (this.isEmpty()) {
+      return null;
+    } 
+
+    return this.buffer[this.head];
+  }
 }
 

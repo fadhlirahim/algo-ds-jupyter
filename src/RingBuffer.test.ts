@@ -35,5 +35,9 @@ describe('RingBuffer', () => {
     expect(buffer.buffer[0]).toEqual(5)
     expect(buffer.dequeue()).toBe(1);
   });
+
+  it('should return null when peeking empty buffer', () => {
+    expect(buffer.peek()).toBeNull();
+  });
 });
 
